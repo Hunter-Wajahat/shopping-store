@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --dtheme: #059862;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  /* border: 2px solid black; */
+  padding: 5px;
+  align-items: center;
+  background-color: #059862;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 10;
+}
+
+.name {
+  font-size: xx-large;
+  text-decoration: none;
+  color: white;
+}
+
+/* Search Bar Styling */
+#searchBar {
+  display: flex;
+  align-items: center;
+}
+
+#searchBar input[type="search"] {
+  padding: 8px;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  background-color: #ffffff;
+  color: #059862;
+  font-size: 14px;
+  outline: none;
+  transition: width 0.4s ease;
+  /* Expanding effect */
+  width: 150px;
+  /* Start small */
+  height: 40px;
+}
+
+#searchBar input[type="search"]:focus {
+  width: 250px;
+  /* Expands on focus */
+}
+
+/* Search Button Styling */
+#searchBar button {
+  padding: 8px 16px;
+  background-color: #ffffff;
+  color: #059862;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  height: 40px;
+}
+
+#searchBar button:hover {
+  background-color: #ff9800;
+  /* Creative orange color on hover */
+  color: #ffffff;
+  transform: scale(1.05);
+  /* Slightly enlarge button */
+}
+
+
+.gotocart {
+  /* border: 1px solid black; */
+  text-align: center;
+  font-size: xx-large;
+  margin: 5px;
+  cursor: pointer;
+  /* text-shadow: 5px 5px ; */
+  color: white;
+}
+
+.gotocart:hover {
+  text-shadow: 1px 0px 4px;
+} 
+
+.register {
+  display: flex;
+  /* border: 1px solid black; */
+  align-items: center;
+}
+
+.login button {
+  background-color: transparent;
+  color: white;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 2px solid white;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+
+.login button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: white;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.login button:hover::after {
+  width: 100%;
+  /* Underline grows on hover */
+}
+
+.signin button {
+  background-color: transparent;
+  color: white;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 2px solid white;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+
+.signin button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: white;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.signin button:hover::after {
+  width: 100%;
+  /* Underline grows on hover */
+}
+
+
+
+.offers {
+  /* border: 2px solid black; */
+  /* height: 117vh; */
+  /* width: 80; */
+  margin-top: 70px;
+  text-align: center;
+
+
+}
+
+
+
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; /*Adjust based on the number of images*/
+}
+
+.slider-images a {
+  flex-shrink: 0;
+  width: 100%; /* Ensures each anchor takes the full width of the slider */
+  text-decoration: none; /* Removes underline from links */
+}
+
+.slider-images img {
+  width: 100%; /* Makes the image fill the anchor tag */
+  height: auto; /* Maintains aspect ratio */
+}
+
+
+
+.catagories {
+  font-family:'poppins';
+  /* border: 2px solid black; */
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  overflow: auto;
+}
+
+.cat {
+  border: 1px solid black;
+  margin: 20px;
+  padding: 10px;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.cathead {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* margin-top: 70px; */
+  margin-left: 20px;
+  /* border: 1px solid black; */
+}
+
+@media screen and (min-width:937px) { */
+.offers{
+  height: 117vh;
+}
+
+}
+
+.main_cat {
+  /* aspect-ratio: 8/8; */
+  border: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.catagories .cat:nth-of-type(1) {
+  background-image: url('https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: 300px;
+  background-color: black;
+}
+
+.catagories .cat:nth-of-type(2) {
+  background-image: url('https://img.freepik.com/premium-photo/discover-latest-gym-equipment-images_1199394-23302.jpg?size=626&ext=jpg&ga=GA1.1.1520476738.1717708067&semt=ais_hybrid');
+  background-size: 200px;
+  background-color: black;
+}
+
+.catagories .cat:nth-of-type(3) {
+  background-image: url('https://cdn.packhacker.com/2022/07/f1b89bdb-travel-tech-acc-featured.jpg');
+  background-size: 300px;
+  background-color: black;
+  background-position: center;
+}
+
+.catagories .cat:nth-of-type(4) {
+  background-image: url('https://noticemestore.com/cdn/shop/files/noticemestore.com_BeautyofJoseon-LightOnSerumCentella_VitaC_2.jpg?v=1695243974&width=1000');
+  background-size: 300px;
+  background-color: black;
+  background-position: center;
+
+}
+
+.dark {
+  background-color: black;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  visibility: hidden;
+  border-radius: 5px;
+  bottom: -100%;
+  background-color: #059862;
+  transition: all 0.5s ease;
+ 
+}
+
+.cat .catxt {
+  visibility: hidden;
+  color: white;
+  z-index: 2;
+}
+
+.main_cat:hover span {
+  visibility: visible;
+}
+
+.cat:hover .dark {
+  visibility: visible;
+  transform: translateY(-100%);
+  background-color: black;
+  
+}
+
+.it img:nth-of-type(1) {
+  height: 50%;
+  width: 100%;
+  margin: 10px;
+  /* margin-bottom: 35px; */
+  /* object-fit: contain; */
+  /* width: 150px; */
+  object-fit: cover;
+  position: absolute;
+  top: 15px;
+  border-radius: 15%;
+  /* cursor: pointer; */
+}
+
+.ranhead {
+  width: 60%;
+  margin-top: 70px;
+  margin-left: 20px;
+  z-index: 0;
+  
+}
+
+.it {
+  /* position: relative; */
+  height: 350px;
+  width: 80%;
+  
+  margin-top: 0px;
+  font-family:'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  flex: 1 1 200px;
+}
+.trp{
+  /* border: 1px solid black; */
+  width: 100%;
+  z-index: 9999;
+  align-self: flex-end;
+  height: 37%;
+  text-align: left;
+  font-size: small;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  line-height: 25px;
+  
+}
+
+.tittle{
+  margin-bottom: 10px;
+}
+
+
+.random {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Space between boxes */
+  justify-content: space-around; /* Center the boxes */
+
+
+}
+
+
+
+.description-container {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* height: 100px; */
+  /* position: absolute; */
+  /* bottom: 35px; */
+  /* border: 1px solid black; */
+  overflow: hidden;
+  /* white-space: nowrap; */
+  text-overflow: ellipsis;
+  font-weight: 400;
+  align-items: center;
+  margin-bottom: -15px;
+  text-overflow: clip;
+
+}
+
+
+
+.it .bx-cart-add {
+  position: absolute;
+  top:0px;
+  right: 0px;
+  cursor: pointer;
+  font-size: 25px;
+  margin: 2px;
+  display: inline-block;
+  cursor: pointer;
+  /* opacity: 0.5; */
+  /* border: 1px solid black; */
+  transition: transform 0.3s ease, color 0.3s ease;
+  /* Smooth scaling on hover */
+}
+
+.bx-cart-add:hover {
+  transform: scale(1.2);
+  /* Slightly enlarge the cart icon on hover */
+  color: var(--dtheme);
+  /* Change icon color on hover (e.g., orange) */
+  color: var(--dtheme);
+  /* Bright orange color */
+}
+
+.popup-text {
+  visibility: hidden;
+  width: 80px;
+  background-color: #34313192;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px;
+  position: absolute;
+  bottom: 80%;
+  /* Show above the element */
+  right: -150%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  /* Optional: Add some space between the element and the pop-up */
+  margin-bottom: 5px;
+  font-size: 12px;
+  /* font-weight: bolder; */
+  opacity: 0;
+  /* Initially hidden */
+  transition: opacity 0.4s ease, bottom 0.4s ease;
+  /* Smooth fade-in effect */
+  /* box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); */
+  /* Soft shadow for depth */
+  /* background: linear-gradient(135deg, #ff9800, #ff5722); */
+  /* Gradient background */
+  font-family:Arial, Helvetica, sans-serif;
+  /* font-weight:bold; */
+  border: 2px solid #90888895;
+}
+
+i:hover .popup-text {
+  visibility: visible;
+  opacity: 1;
+  /* Fade in the popup */
+  bottom: 30px;
+  /* Slide up effect */
+
+
+}
+
+
+.plus:hover {
+  box-shadow: 0 0 15px 5px #d48e23;
+  transform: scale(1.05);
+  /* Slightly larger on hover */
+  color: white;
+  opacity: 1;
+}
+
